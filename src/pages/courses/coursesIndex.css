@@ -1,0 +1,5 @@
+.courses-index{
+    display: grid;
+    grid-template-columns: 228px 1fr;
+    flex: 1;
+}
