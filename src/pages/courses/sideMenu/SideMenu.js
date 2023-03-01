@@ -12,39 +12,39 @@ function SideMenu() {
         <input type="text" placeholder="Search" />
       </div>
       <div className="menu-options">
-        <Link to="/">
-          <div className="courses-home">Courses Home</div>
+        <Link to="explore">
+          <div>Courses Home</div>
         </Link>
         <hr />
         <h3>EXPLORE</h3>
         <Link to="recommended">
-          <div className="courses-home">Recommended for You</div>
+          <div>Recommended for You</div>
         </Link>
         <Link to="trending">
-          <div className="courses-home">Trending Now</div>
+          <div>Trending Now</div>
         </Link>
         <Link to="team">
-          <div className="courses-home">Team Picks</div>
+          <div>Team Picks</div>
         </Link>
         <hr />
         <h3>CATEGORIES</h3>
         <Link to="marketing">
-          <div className="courses-home">Marketing</div>
+          <div>Marketing</div>
         </Link>
         <Link to="sell">
-          <div className="courses-home">Sell Online</div>
+          <div>Sell Online</div>
         </Link>
         <Link to="services">
-          <div className="courses-home">Services & Events</div>
+          <div>Services & Events</div>
         </Link>
         <Link to="media">
-          <div className="courses-home">Media & Content</div>
+          <div>Media & Content</div>
         </Link>
         <Link to="design">
-          <div className="courses-home">Design Elements</div>
+          <div>Design Elements</div>
         </Link>
         <Link to="communication">
-          <div className="courses-home">communication</div>
+          <div>communication</div>
         </Link>
       </div>
     </div>
