@@ -47,7 +47,22 @@ export const recomended = [
     rating: "4.4",
     thumbnail: courses,
   },
+  {
+    name: "Video Title",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    rating: "4.4",
+    thumbnail: courses,
+  },
+  {
+    name: "Video Title",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    rating: "4.4",
+    thumbnail: courses,
+  },
 ];
+
 
 function CoursesIndex() {
   return (
