@@ -9,7 +9,7 @@ import Index from './pages/index/Index'
 
 function Router() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/idea-website'>
         <Routes>
             <Route path='/' exact element={<Index />} >
               <Route index element={<Navigate to='home' />} /> {/* default route -> home */}
