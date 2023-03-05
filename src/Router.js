@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { HashRouter, outer, Navigate, Route, Routes } from 'react-router-dom'
 import CoursesIndex from './pages/courses/CourseIndex'
 import CoursesHome from './pages/courses/coursesHome/CoursesHome'
 import EventIndex from './pages/events/EventIndex'
@@ -9,7 +9,7 @@ import Index from './pages/index/Index'
 
 function Router() {
   return (
-    <BrowserRouter basename='/idea-website'>
+    <HashRouter basename='/idea-website'>
         <Routes>
             <Route path='/' exact element={<Index />} >
               <Route index element={<Navigate to='home' />} /> {/* default route -> home */}
@@ -22,7 +22,7 @@ function Router() {
               <Route path='events' element={<EventIndex />} />
             </Route>
         </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
