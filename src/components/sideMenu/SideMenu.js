@@ -7,6 +7,7 @@ function SideMenu() {
     <div className="side-menu">
       <h2>IDEA</h2>
       <div className="menu-options">
+      <hr />
         <Link to="home">
           <div>Home</div>
         </Link>

@@ -8,6 +8,11 @@
     gap: .5rem;
 }
 
+.side-menu > h2{
+    padding: 0rem 1rem;
+    padding-top: 1rem;
+}
+
 .side-menu > .menu-options{
     padding: 1rem 0rem;
     width: 100%;
@@ -24,7 +29,7 @@
     background-color: rgb(200, 230, 242);
 }
 
-.side-menu > .menu-options > hr{
+.side-menu  hr{
     width: 85%;
     margin: .5rem auto;
     opacity: .5;
