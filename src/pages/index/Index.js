@@ -1,11 +1,11 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import Navbar from '../../components/Navbar/Navbar'
+import SideMenu from '../../components/sideMenu/SideMenu'
 
 function Index() {
   return (
     <div className='index'>
-      <Navbar /> {/* navbar */}
+      <SideMenu />
       {/* Outlet will render the inner component of the route */}
       {/* default route -> home */}
       <Outlet />

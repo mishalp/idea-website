@@ -1,19 +1,23 @@
 import React from "react";
 import "./sideMenu.css";
-import search from "../../../images/search.png";
 import { Link } from "react-router-dom";
 
 function SideMenu() {
   return (
     <div className="side-menu">
-      <h2>Menu</h2>
-      <div className="search-bar">
-        <img src={search} alt="" />
-        <input type="text" placeholder="Search" />
-      </div>
+      <h2>IDEA</h2>
       <div className="menu-options">
-        <Link to="explore">
-          <div>Courses Home</div>
+        <Link to="home">
+          <div>Home</div>
+        </Link>
+        <Link to="courses">
+          <div>Courses</div>
+        </Link>
+        <Link to="events">
+          <div>Events</div>
+        </Link>
+        <Link to="History">
+          <div>History</div>
         </Link>
         <hr />
         <h3>EXPLORE</h3>

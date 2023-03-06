@@ -6,6 +6,47 @@
     overflow-y: scroll;
 }
 
+.courses-home > .slides{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.courses-home > .slides > .btns{
+    position: absolute;
+    display: flex;
+    align-self: end;
+    align-items: end;
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: 3rem;
+}
+
+.courses-home > .slides > .btns > button{
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;  
+}
+.courses-home > .slides > .btns > button:hover{
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+.courses-home > .slides > .btns > button:active{
+    transform: translateY(-1px);
+}
+
 .courses-home > .upper-section{
     display: grid;
     width: 100%;
@@ -90,19 +131,25 @@
     gap: 1rem;
 }
 
-.courses-home > .main-div > h2{
+.courses-home > .main-div > .section > h2{
     font-size: 25px;
     color: #282828;
+    margin: 1rem 0rem;
 }
 
-.courses-home > .main-div > .card-container-div{
+.courses-home > .main-div > .section{
+    margin: .5rem;
+}
+
+
+.courses-home > .main-div > .section > .card-container-div{
     display: grid;
     max-width: inherit;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
 }
 
-.courses-home > .main-div > .card-container-div > .card{
+.courses-home > .main-div > .section > .card-container-div > .card{
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     border-radius: 5px;
     display: flex;
@@ -112,25 +159,25 @@
     color: #727984;
 }
 
-.courses-home > .main-div > .card-container-div > .card > .body > h4{
+.courses-home > .main-div > .section > .card-container-div > .card > .body > h4{
     color: #484D57;
 }
 
-.courses-home > .main-div > .card-container-div > .card > .body > p{
+.courses-home > .main-div > .section > .card-container-div > .card > .body > p{
     color: #727984;
 }
 
-.courses-home > .main-div > .card-container-div > .card:hover{
+.courses-home > .main-div > .section > .card-container-div > .card:hover{
  transform: translateY(-8px);
  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;   
 }
 
-.courses-home > .main-div > .card-container-div > .card > img{
+.courses-home > .main-div > .section > .card-container-div > .card > img{
     max-width: 220px;
     align-self: center;
 }
 
-.courses-home > .main-div > .card-container-div > .card > .body{
+.courses-home > .main-div > .section > .card-container-div > .card > .body{
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -138,7 +185,7 @@
     height: 100%;
 }
 
-.courses-home > .main-div > .card-container-div > .card > .body > div{
+.courses-home > .main-div > .section > .card-container-div > .card > .body > div{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -152,70 +199,23 @@
 
 .courses-home > .main-div > .categories-div{
     display: flex;
-    justify-content: center;
+    gap: 1rem;
+    flex-direction: column;
     position: relative;
     margin: 10px;
-    padding: 5rem 10px;
+    padding: 2rem;
     background-color: #f0f4f7;
 }
 
-.courses-home > .main-div > .categories-div > .carousel > .slides{
-    display: flex;
-    gap: .6rem;
-    transition: .5s ease-out;
+.courses-home > .main-div > .categories-div > section{
+    align-self: center;
 }
 
-.courses-home > .main-div > .categories-div > .carousel > .slides > .slide{
-    width: 200px;
-    background-color: white;
-    padding: 3.5rem;
-    border-radius: 5px;
+.courses-home > .main-div > .categories-div > section img{
+    width: 250px;
 }
 
-.courses-home > .main-div > .categories-div > .carousel > .slides > img{
-    width: 170px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: .3s;
-}
 
-.courses-home > .main-div > .categories-div > .carousel > .slides > img:hover{
-    transform: translateY(-10px);
-}
 
-.courses-home > .main-div > .categories-div > .carousel{
-    width: 50%;
-    overflow-x: clip;
-}
 
-.courses-home > .main-div > .categories-div > .btn{
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 100px;
-}
 
-.courses-home > .main-div > .categories-div > .btn > span{
-    padding: .5rem;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.courses-home > .main-div > .categories-div > .indicator-div{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 7px;
-    bottom: 30px;
-    padding: 1rem;
-}
-
-.courses-home > .main-div > .categories-div > .indicator-div > .indicator{
-    width: 20px;
-    height: 5px;
-    background-color: rgb(255, 255, 255);
-    transition: .3s ease-in-out;
-}

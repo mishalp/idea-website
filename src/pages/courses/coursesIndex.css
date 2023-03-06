@@ -1,6 +1,0 @@
-.courses-index{
-    display: grid;
-    grid-template-columns: 228px auto;
-    padding-top: 3rem;
-    overflow-y: hidden;
-}
