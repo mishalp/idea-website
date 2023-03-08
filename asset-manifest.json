@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/idea-website/static/css/main.7954b974.css",
-    "main.js": "/idea-website/static/js/main.acda94d1.js",
-    "static/media/slide.jpg": "/idea-website/static/media/slide.34af0e3cdf13a6bc899b.jpg",
-    "static/media/courses.jpg": "/idea-website/static/media/courses.8710a55d8715b0b1f484.jpg",
-    "index.html": "/idea-website/index.html",
-    "main.7954b974.css.map": "/idea-website/static/css/main.7954b974.css.map",
-    "main.acda94d1.js.map": "/idea-website/static/js/main.acda94d1.js.map"
+    "main.css": "/static/css/main.e59ccf65.css",
+    "main.js": "/static/js/main.1cf4fb39.js",
+    "static/media/slide.jpg": "/static/media/slide.c9e36fc0a3eb19d7ee24.jpg",
+    "static/media/courses.jpg": "/static/media/courses.8710a55d8715b0b1f484.jpg",
+    "index.html": "/index.html",
+    "main.e59ccf65.css.map": "/static/css/main.e59ccf65.css.map",
+    "main.1cf4fb39.js.map": "/static/js/main.1cf4fb39.js.map"
   },
   "entrypoints": [
-    "static/css/main.7954b974.css",
-    "static/js/main.acda94d1.js"
+    "static/css/main.e59ccf65.css",
+    "static/js/main.1cf4fb39.js"
   ]
 }
