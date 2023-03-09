@@ -12,10 +12,25 @@ a{
 }
 
 .index{
-    width: 100%;
     height: 100vh;
+    width: 100vw;
     display: grid;
-    grid-template-columns: 74px 146px 1fr;
-    grid-template-rows: auto 50px 1fr;
+    grid-template-columns: 74px 146px auto;
+    grid-template-rows: 60px 50px auto;
     transition: .5s;
+    gap: .5rem;
+    overflow: hidden;
+
 }
+
+@media only screen and (max-width: 430px) {
+    .index{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 0;
+        overflow: hidden;
+    }
+}
+
+

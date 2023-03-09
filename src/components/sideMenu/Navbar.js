@@ -9,6 +9,7 @@ function Navbar() {
         document.getElementById("min-menu").classList.toggle("disable");
         document.getElementById("side-menu").classList.toggle("border");
       };
+
   return (
     <div className='navbar'>
         <div className="left">
@@ -25,7 +26,6 @@ function Navbar() {
         </div>
         <div className="btns">
             <button>Sign in</button>
-            <button>Sign up</button>
         </div>
     </div>
   )

@@ -95,3 +95,49 @@
     font-size: small;
     font-weight: bold;
 }
+
+@media only screen and (max-width: 430px) {
+    .min-menu{
+        display:none !important;
+    }
+    .side-menu{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        height: 100vh;
+        width: 100vw;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.514);
+        display: none;
+    }
+
+    .border{
+        display: flex !important;
+    }
+
+    .index-toggle{
+        grid-template-columns: 1fr !important ;
+    }
+
+    .menu-options{
+        display: flex !important;
+        flex-direction: column;
+        width: fit-content !important;
+        background-color: white;
+        height: -webkit-fill-available;
+        position: absolute;
+        padding-top: 90px;
+
+    }
+    .disable{
+
+    }
+    .menu-options > a:hover{
+        box-shadow:unset;
+    }
+    .menu-options > a:active{
+        box-shadow: rgba(156, 191, 255, 0.584) 0px 0px 0px 4px
+    }
+
+}

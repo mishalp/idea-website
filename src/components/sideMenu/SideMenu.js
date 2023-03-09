@@ -4,6 +4,13 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 function SideMenu() {
+  const toggle = () => {
+    document.getElementById("menu-options").classList.toggle("disable");
+    document.getElementById("index").classList.toggle("index-toggle");
+    document.getElementById("min-menu").classList.toggle("disable");
+    document.getElementById("side-menu").classList.toggle("border");
+  };
+  const mobile = window.innerWidth < 430? true: false
   return (
     <div className="side-menu" id="side-menu">
       <div className="min-menu" id="min-menu">
@@ -25,33 +32,33 @@ function SideMenu() {
         </Link>
       </div>
       <div className="menu-options disable" id="menu-options">
-        <Link to="home">
+        <Link onClick={mobile? toggle: null} to="home">
           <span class="material-symbols-outlined">home</span>
           <div>Home</div>
         </Link>
-        <Link to="courses">
+        <Link onClick={mobile? toggle: null} to="courses">
           <span class="material-symbols-outlined">school</span>
           <div>Courses</div>
         </Link>
-        <Link to="events">
+        <Link onClick={mobile? toggle: null} to="events">
           <span class="material-symbols-outlined">today</span>
           <div>Events</div>
         </Link>
-        <Link to="History">
+        <Link onClick={mobile? toggle: null} to="History">
           <span class="material-symbols-outlined">history</span>
           <div>History</div>
         </Link>
         <hr />
         <h3>EXPLORE</h3>
-        <HashLink to="/courses/#recommended" smooth>
+        <HashLink onClick={mobile? toggle: null} to="/courses/#recommended" smooth>
           <span class="material-symbols-outlined">sort</span>
           <div>Recommended</div>
         </HashLink>
-        <HashLink to="/courses/#trending" smooth>
+        <HashLink onClick={mobile? toggle: null} to="/courses/#trending" smooth>
           <span class="material-symbols-outlined">trending_up</span>
           <div>Trending Now</div>
         </HashLink>
-        <HashLink to="/courses/#team" smooth>
+        <HashLink onClick={mobile? toggle: null} to="/courses/#team" smooth>
         <span class="material-symbols-outlined">
 diversity_3
 </span>
@@ -59,13 +66,13 @@ diversity_3
         </HashLink>
         <hr />
         <h3>CATEGORIES</h3>
-        <Link to="marketing">
+        <Link onClick={mobile? toggle: null} to="marketing">
         <span class="material-symbols-outlined">
 campaign
 </span>
           <div>Marketing</div>
         </Link>
-        <Link to="sell">
+        <Link onClick={mobile? toggle: null} to="sell">
         <span class="material-symbols-outlined">
 sell
 </span>
@@ -77,19 +84,19 @@ prescriptions
 </span>
           <div>Services & Events</div>
         </Link>
-        <Link to="media">
+        <Link onClick={mobile? toggle: null} to="media">
         <span class="material-symbols-outlined">
 perm_media
 </span>
           <div>Media & Content</div>
         </Link>
-        <Link to="design">
+        <Link onClick={mobile? toggle: null} to="design">
         <span class="material-symbols-outlined">
 design_services
 </span>
           <div>Design Elements</div>
         </Link>
-        <Link to="communication">
+        <Link onClick={mobile? toggle: null} to="communication">
         <span class="material-symbols-outlined">
 hub
 </span>

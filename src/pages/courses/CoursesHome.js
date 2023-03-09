@@ -1,70 +1,79 @@
-import React from "react";
+import React, { useState } from "react";
 import "./coursesHome.css";
 import courses from "../../images/courses.jpg";
-import search from "../../images/search.png";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import image from "../../images/slide.jpg";
-import image2 from "../../images/courses.jpg";
 import "@splidejs/react-splide/css";
 
 export const recomended = [
   {
-    name: "Video Title",
+    name: "Video Title 1",
     description:
       "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
     rating: "4.4",
     thumbnail: courses,
+    category: 'Marketing'
   },
   {
-    name: "Video Title",
+    name: "Video Title 2",
     description:
       "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout",
     rating: "4.4",
     thumbnail: courses,
+    category: 'Sell Online'
   },
   {
-    name: "Video Title",
+    name: "Video Title 3",
     description:
       "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
     rating: "4.4",
     thumbnail: courses,
+    category: 'Services & Events'
   },
   {
-    name: "Video Title",
+    name: "Video Title 4",
     description:
       "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-    rating: "4.4",
+      rating: "4.4",
     thumbnail: courses,
-  },
-  {
-    name: "Video Title",
-    description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-    rating: "4.4",
-    thumbnail: courses,
-  },
-  {
-    name: "Video Title",
-    description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-    rating: "4.4",
-    thumbnail: courses,
-  },
-  {
-    name: "Video Title",
-    description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-    rating: "4.4",
-    thumbnail: courses,
-  },
-  {
-    name: "Video Title",
-    description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-    rating: "4.4",
-    thumbnail: courses,
+    category: 'Media Content'
   },
 ];
+
+export const trending = [
+  {
+    name: "Video Title 5",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    rating: "4.4",
+    thumbnail: courses,
+    category: 'Design Elements'
+  },
+  {
+    name: "Video Title 6",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    rating: "4.4",
+    thumbnail: courses,
+    category: 'Communication'
+  },
+  {
+    name: "Video Title 7",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    rating: "4.4",
+    thumbnail: courses,
+    category: 'Marketing'
+  },
+  {
+    name: "Video Title 8",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    rating: "4.4",
+    thumbnail: courses,
+    category: 'Sell Online'
+  },
+]
 
 const CardBuilder = ({ arr, limit }) => (
   <>
@@ -87,15 +96,33 @@ const CardBuilder = ({ arr, limit }) => (
   </>
 );
 
+
+
+const category = ['Marketing', 'Sell Online', 'Services & Events', 'Media Content', 'Design Elements', 'Communication']
+
 function CoursesHome() {
+  const [filter, setFilter] = useState(null)
+
+  const filterItems = (item, e) => {
+    //const btns = document.querySelectorAll('.filter')
+    const active = document.getElementsByClassName('active')
+    if(active[0]){
+      if(active[0].innerHTML == e.target.innerHTML){
+        active[0].classList.toggle('active')
+      }else{
+        active[0].classList.remove('active')
+        e.target.classList.add('active')
+
+      }
+    }else{
+      e.target.classList.add('active')
+    }
+    setFilter(filter === null? item: filter == item? null: item)
+  }
+
   return (<>
-          <div className="fixed">
-        <button>Marketing</button>
-        <button>Sell Online</button>
-        <button>Services & Events</button>
-        <button>Media Content</button>
-        <button>Design Elements</button>
-        <button>Communication</button>
+        <div className="fixed">
+        {category.map((item, index)=><button className="filter" onClick={(e)=>filterItems(item, e)} key={index}>{item}</button>)}
         </div>
     <div className="courses-home">
 
@@ -161,13 +188,13 @@ function CoursesHome() {
         <div id="recommended" className="section">
           <h2>Recommended for You</h2>
           <div className="card-container-div">
-            <CardBuilder arr={recomended} limit={4} />
+            <CardBuilder arr={recomended.filter((item)=> filter === null? item: filter == item.category)} limit={4} />
           </div>
         </div>
         <div id="trending" className="section">
           <h2>Trending Now</h2>
           <div className="card-container-div">
-            <CardBuilder arr={recomended} limit={4} />
+            <CardBuilder arr={trending.filter((item)=> filter === null? item: filter == item.category)} limit={4} />
           </div>
         </div>
         <div id="team" className="section">

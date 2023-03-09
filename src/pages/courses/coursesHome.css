@@ -112,12 +112,13 @@
     margin: .5rem;
 }
 
-
 .courses-home > .main-div > .section > .card-container-div{
     display: grid;
     max-width: inherit;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    justify-items: center;
     gap: 30px;
+    justify-content: center;
 }
 
 .courses-home > .main-div > .section > .card-container-div > .card{
@@ -184,6 +185,73 @@
 
 .courses-home > .main-div > .categories-div > section img{
     width: 250px;
+}
+
+.active{
+    box-shadow: rgba(156, 191, 255, 0.584) 0px 0px 0px 4px
+}
+
+@media only screen and (max-width: 770px){
+    .fixed > button{
+        height: 2rem;
+        min-width: 10rem;
+    }
+    .fixed{
+        overflow-y: scroll;
+        gap: .5rem;
+        justify-content: unset;
+        align-self: unset;
+        height: fit-content;
+    }
+
+    .fixed::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .courses-home{
+        grid-row: 3 /4;
+    }
+    .fixed{
+        margin-top: 60px;
+        overflow-y: scroll;
+        gap: .5rem;
+        justify-content: unset;
+        align-self: unset;
+        height: fit-content;
+    }
+    .fixed::-webkit-scrollbar{
+        display: none;
+    }
+    .fixed > button{
+        padding: .5rem .7rem;
+        border-radius: 15px;
+        border: none;
+        width: max-content;
+        font-size: small;
+        height: inherit;
+        min-width: 9rem;
+    }
+    .courses-home > .slides > .btns{
+        padding-bottom: 20px;
+    }
+    
+    .courses-home > .slides > .btns > button{
+        font-size: 10px;
+        padding: .7rem .9rem;
+    }
+    .courses-home > .main-div > .section > h2{
+        font-size: 20px;
+        color: #282828;
+        margin: 1rem 0rem;
+    }
+    .courses-home > .main-div > .categories-div{
+        padding: 5px;
+    }
+    .courses-home > .main-div{
+        padding: 5px;
+    }
 }
 
 

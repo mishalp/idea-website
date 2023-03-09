@@ -6,6 +6,7 @@
     grid-column: 1 / 4;
     grid-row: 1 / 2;
     justify-content: space-between;
+    z-index: 2;
 }
 
 .navbar > .search-bar{
@@ -60,7 +61,6 @@
 .navbar > .left{
     display: flex;
     align-items: center;
-    gap: 1rem;
 }
 
 .navbar > .left > span{
@@ -123,3 +123,42 @@
     top: -30px;
     left: -30px;
   }
+
+  @media only screen and (max-width: 430px) {
+    .navbar{
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        width: calc(100% - 20px);
+        gap: 10px;
+    }
+    .navbar > .search-bar > .input-div{
+        display: none;
+    }
+
+    .navbar> .search-bar:hover > .input-div{
+        display: flex;
+    }
+
+    .navbar > .btns{
+        
+    }
+    .navbar > .search-bar {
+        width: auto;
+       margin-left: auto;
+    }
+
+    .navbar > .left > span{
+       
+    }
+    .navbar > .left > span:hover{
+        box-shadow: unset;
+    }
+    .navbar > .left > span:active{
+        box-shadow: unset;
+        box-shadow: rgba(156, 191, 255, 0.584) 0px 0px 0px 4px;
+    }
+}
+
+
