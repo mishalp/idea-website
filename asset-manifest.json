@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/idea-website/static/css/main.e59ccf65.css",
-    "main.js": "/idea-website/static/js/main.781b0508.js",
+    "main.css": "/idea-website/static/css/main.aec397d1.css",
+    "main.js": "/idea-website/static/js/main.c958eff0.js",
     "static/media/slide.jpg": "/idea-website/static/media/slide.c9e36fc0a3eb19d7ee24.jpg",
     "static/media/courses.jpg": "/idea-website/static/media/courses.8710a55d8715b0b1f484.jpg",
     "index.html": "/idea-website/index.html",
-    "main.e59ccf65.css.map": "/idea-website/static/css/main.e59ccf65.css.map",
-    "main.781b0508.js.map": "/idea-website/static/js/main.781b0508.js.map"
+    "main.aec397d1.css.map": "/idea-website/static/css/main.aec397d1.css.map",
+    "main.c958eff0.js.map": "/idea-website/static/js/main.c958eff0.js.map"
   },
   "entrypoints": [
-    "static/css/main.e59ccf65.css",
-    "static/js/main.781b0508.js"
+    "static/css/main.aec397d1.css",
+    "static/js/main.c958eff0.js"
   ]
 }
