@@ -98,17 +98,19 @@ const CardBuilder = ({ arr, limit }) => (
 
 
 
-const category = ['Marketing', 'Sell Online', 'Services & Events', 'Media Content', 'Design Elements', 'Communication']
+const category = ['All', 'Marketing', 'Sell Online', 'Services & Events', 'Media Content', 'Design Elements', 'Communication']
 
 function CoursesHome() {
-  const [filter, setFilter] = useState(null)
+  const [filter, setFilter] = useState('All')
 
   const filterItems = (item, e) => {
     //const btns = document.querySelectorAll('.filter')
     const active = document.getElementsByClassName('active')
+    const allBtn = document.getElementById('All')
     if(active[0]){
       if(active[0].innerHTML == e.target.innerHTML){
         active[0].classList.toggle('active')
+        allBtn.classList.add('active')
       }else{
         active[0].classList.remove('active')
         e.target.classList.add('active')
@@ -117,12 +119,12 @@ function CoursesHome() {
     }else{
       e.target.classList.add('active')
     }
-    setFilter(filter === null? item: filter == item? null: item)
+    setFilter(filter === 'All'? item: filter == item? 'All': item)
   }
 
   return (<>
         <div className="fixed">
-        {category.map((item, index)=><button className="filter" onClick={(e)=>filterItems(item, e)} key={index}>{item}</button>)}
+        {category.map((item, index)=><button id={index === 0? 'All': null} className={index === 0? 'filter active': 'filter'} onClick={(e)=>filterItems(item, e)} key={index}>{item}</button>)}
         </div>
     <div className="courses-home">
 
@@ -188,18 +190,19 @@ function CoursesHome() {
         <div id="recommended" className="section">
           <h2>Recommended for You</h2>
           <div className="card-container-div">
-            <CardBuilder arr={recomended.filter((item)=> filter === null? item: filter == item.category)} limit={4} />
+            <CardBuilder arr={recomended.filter((item)=> filter === 'All'? item: filter == item.category)} limit={4} />
           </div>
         </div>
         <div id="trending" className="section">
           <h2>Trending Now</h2>
           <div className="card-container-div">
-            <CardBuilder arr={trending.filter((item)=> filter === null? item: filter == item.category)} limit={4} />
+            <CardBuilder arr={trending.filter((item)=> filter === 'All'? item: filter == item.category)} limit={4} />
           </div>
         </div>
         <div id="team" className="section">
           <h2>Team Picks</h2>
           <div className="card-container-div">
+            
             <CardBuilder arr={recomended} limit={4} />
           </div>
         </div>

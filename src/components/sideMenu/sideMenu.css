@@ -110,6 +110,7 @@
         z-index: 2;
         background-color: rgba(0, 0, 0, 0.514);
         display: none;
+        padding: 0;
     }
 
     .border{
@@ -125,9 +126,10 @@
         flex-direction: column;
         width: fit-content !important;
         background-color: white;
+        top: 51.49px;
         height: -webkit-fill-available;
         position: absolute;
-        padding-top: 90px;
+        padding-top: 20px;
 
     }
     .disable{
